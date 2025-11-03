@@ -1,0 +1,21 @@
+Security+ Objectives Mapping (SY0-701) — Windows Event Monitor & Analyzer
+
+Domain 1 — Threats, Attacks & Vulnerabilities
+- 1.2 Compare and contrast types of attacks (e.g., brute force): simulated repeated failed logons (4625).
+- 1.5 Analyze indicators associated with attacks (log entries, failed authentication).
+
+Domain 2 — Architecture & Design
+- 2.1 Security concepts in enterprise environments: segmented VirtualBox lab network.
+- 2.4 Implement secure configurations: enable Windows auditing / Sysmon.
+
+Domain 3 — Implementation
+- 3.4 Identity and account management controls: monitor local account logons.
+- 3.7 Secure network protocols: inspect RDP/SMB traffic with Wireshark.
+
+Domain 4 — Operations & Incident Response
+- 4.1 Use tools to assess security: Wireshark, log analysis, custom Python script.
+- 4.2 Importance of processes for incident response: incident write-up & review.
+- 4.3 Apply common data sources: Windows logs + network data correlation.
+
+Domain 5 — Governance, Risk, and Compliance
+- 5.5 Documentation and evidence in incident response: screenshots, triage report.
