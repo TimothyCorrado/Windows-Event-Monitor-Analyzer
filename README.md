@@ -12,6 +12,11 @@ Detect and summarize unusual Windows logon activity using **PowerShell + Python*
 
 ---
 
+### 🗓️ Project Updates
+> **Update (Nov 2, 2025):** Completed first successful parser run — analyzed Event IDs **4625** and **4624**, verified triage output and generated `triage.txt`.
+
+---
+
 ## 🔎 Quick Preview
 
 [![Click to view evidence](./evidence/lab_setup.png)](./evidence/wireshark_failedlogons.png)
