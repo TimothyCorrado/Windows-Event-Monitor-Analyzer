@@ -1,0 +1,16 @@
+Windows Logon Triage Summary
+Generated: 2025-11-03 01:56:23Z UTC
+
+Total failed logons (4625): 0
+Total successful logons (4624): 0
+
+Top source IPs (failed 4625):
+
+Top targeted accounts (failed 4625):
+
+Top accounts (successful 4624):
+
+Notes:
+  • Investigate IPs with unusually high failed attempts.
+  • Compare failed vs. successful to spot compromised credentials.
+  • Align timestamps with Wireshark captures for correlation.
