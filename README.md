@@ -15,6 +15,30 @@ Detect and summarize unusual Windows logon activity using **PowerShell + Python*
 ### 🗓️ Project Updates
 > **Update (Nov 2, 2025):** Completed first successful parser run — analyzed Event IDs **4625** and **4624**, verified triage output and generated `triage.txt`.
 
+### 🧩 Phase 1: Build Your Home Cyber Lab
+
+**Date:** November 3, 2025  
+**Status:** In Progress ✅  
+
+#### What I Set Up
+- Installed **VirtualBox**
+- Downloaded **Kali Linux ISO (installer)** and **Windows 10 ISO**
+- Created two virtual machines:
+  - Kali Linux (4GB RAM, 20GB Disk)
+  - Windows 10 (4GB RAM, 40GB Disk)
+- Configured both on an **Internal Network** (`CyberLabNet`)
+- Began testing connectivity (Wireshark + ping)
+
+#### Current Results
+- Kali and Windows both installed successfully
+- Wireshark running and ready to capture packets
+- Encountered minor network communication issues (to fix next session)
+
+#### Next Step
+- Troubleshoot ping connectivity between VMs  
+- Complete Wireshark packet capture for `lab_setup.png`  
+- Proceed to **Phase 2: Collect Windows Logs**
+
 ---
 
 ## 🔎 Quick Preview
