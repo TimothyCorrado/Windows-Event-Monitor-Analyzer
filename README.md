@@ -13,7 +13,35 @@ Detect and summarize unusual Windows logon activity using **PowerShell + Python*
 ---
 
 ### 🗓️ Project Updates
-> **Update (Nov 2, 2025):** Completed first successful parser run — analyzed Event IDs **4625** and **4624**, verified triage output and generated `triage.txt`.
+
+## 🔹 Phase 1 — ✅ Completed
+**Build Your Home Cyber Lab**  
+**Date:** November 4, 2025  
+
+**Summary:**  
+- Created two virtual machines (Windows 10 + Kali Linux) in VirtualBox.  
+- Configured an **Internal Network** named `CyberLabNet`.  
+- Verified connectivity with ICMP (ping) tests.  
+- Captured traffic in Wireshark and saved evidence.
+
+**Deliverables:**  
+- ![Lab Setup Screenshot](evidence/lab_setup.png)  
+- [Wireshark Capture (lab_setup.pcapng)](evidence/lab_setup.pcapng)
+
+---
+
+## 🔹 Phase 2 — 🕓 Next Up
+**Collect Windows Event Logs**
+
+**Goal:**  
+Export and analyze Windows Security Logs using PowerShell (`wevtutil`) for failed logon events (Event ID 4625).  
+Prepare sample logs to feed into the Python parser in Phase 3.
+
+**Planned Tasks:**  
+- Enable and verify Windows event logging.  
+- Simulate failed logons.  
+- Export logs with PowerShell.  
+- Transfer to Kali for analysis.
 
 ### 🧩 Phase 1: Build Your Home Cyber Lab
 
@@ -58,8 +86,6 @@ Detect and summarize unusual Windows logon activity using **PowerShell + Python*
 | **Network analysis** | **Wireshark** capture during logon attempts; timestamp correlation |
 | **Lab design** | **VirtualBox**: Windows + Kali on an isolated network |
 | **Reporting** | 1–2 page incident report template in `/report/` |
-
-> Security+ mapping is in `Security+_Objectives_Mapped.txt` (kept separate to avoid clutter).
 
 ---
 
