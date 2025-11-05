@@ -6,6 +6,11 @@
 [![Wireshark](https://img.shields.io/badge/Wireshark-✓-blue)]()
 [![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20Kali%20%7C%20VirtualBox-lightgrey)]()
 
+![Status](https://img.shields.io/badge/Status-Phase%201%20Completed-brightgreen)
+![Next](https://img.shields.io/badge/Next%20Up-Phase%202%20Planned-blue)
+![Tools](https://img.shields.io/badge/Tools-VirtualBox%20%7C%20Kali%20%7C%20Wireshark-orange)
+![Language](https://img.shields.io/badge/Language-PowerShell%20%7C%20Python-yellow)
+
 Detect and summarize unusual Windows logon activity using **PowerShell + Python**, and correlate with **Wireshark** network captures — all inside a **VirtualBox** home lab (Windows + Kali).
 
 > **Hiring managers:** This project simulates a junior SOC workflow: collect → parse → triage → correlate → report.
@@ -104,3 +109,14 @@ Prepare sample logs to feed into the Python parser in Phase 3.
 # Inside this repo folder (Windows VM)
 .\scripts\export-logons.ps1
 # Creates: .\logs\FailedLogons.txt and .\logs\SuccessfulLogons.txt
+
+## 🏁 Project Timeline
+
+| Phase | Description | Status |
+|-------|--------------|--------|
+| 1 | Build Home Cyber Lab | 🟢 **Completed** |
+| 2 | Collect Windows Event Logs | ⚪ **Planned** |
+| 3 | Python Log Parser | ⚪ **Planned** |
+| 4 | Network Correlation | ⚪ **Planned** |
+| 5 | Documentation & Reporting | ⚪ **Planned** |
+| 6 | Bonus: Dashboard + Automation | ⚪ **Planned** |
