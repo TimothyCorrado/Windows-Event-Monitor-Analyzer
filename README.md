@@ -78,8 +78,6 @@ Prepare sample logs to feed into the Python parser in Phase 3.
 
 [![Click to view evidence](./evidence/lab_setup.png)](./evidence/wireshark_failedlogons.png)
 
-*(Replace the two image files above with your screenshots: `evidence/lab_setup.png` and `evidence/wireshark_failedlogons.png`.)*
-
 ---
 
 ## 🧠 What This Shows (at a glance)
