@@ -8,8 +8,6 @@
 
 ![Status](https://img.shields.io/badge/Status-Phase%201%20Completed-brightgreen)
 ![Next](https://img.shields.io/badge/Next%20Up-Phase%202%20Planned-blue)
-![Tools](https://img.shields.io/badge/Tools-VirtualBox%20%7C%20Kali%20%7C%20Wireshark-orange)
-![Language](https://img.shields.io/badge/Language-PowerShell%20%7C%20Python-yellow)
 
 Detect and summarize unusual Windows logon activity using **PowerShell + Python**, and correlate with **Wireshark** network captures — all inside a **VirtualBox** home lab (Windows + Kali).
 
@@ -99,15 +97,6 @@ Prepare sample logs to feed into the Python parser in Phase 3.
 - **Learning:** TryHackMe (optional validation labs)
 
 ---
-
-## 🚀 Run It
-
-### 1) Export Windows Security logs (PowerShell as Admin)
-```powershell
-# Inside this repo folder (Windows VM)
-.\scripts\export-logons.ps1
-# Creates: .\logs\FailedLogons.txt and .\logs\SuccessfulLogons.txt
-
 ## 🏁 Project Timeline
 
 | Phase | Description | Status |
@@ -118,3 +107,11 @@ Prepare sample logs to feed into the Python parser in Phase 3.
 | 4 | Network Correlation | ⚪ **Planned** |
 | 5 | Documentation & Reporting | ⚪ **Planned** |
 | 6 | Bonus: Dashboard + Automation | ⚪ **Planned** |
+## 🚀 Run It
+
+### 1) Export Windows Security logs (PowerShell as Admin)
+```powershell
+# Inside this repo folder (Windows VM)
+.\scripts\export-logons.ps1
+# Creates: .\logs\FailedLogons.txt and .\logs\SuccessfulLogons.txt
+
