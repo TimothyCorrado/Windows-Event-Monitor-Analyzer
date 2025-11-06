@@ -6,8 +6,8 @@
 [![Wireshark](https://img.shields.io/badge/Wireshark-✓-blue)]()
 [![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20Kali%20%7C%20VirtualBox-lightgrey)]()
 
-![Status](https://img.shields.io/badge/Status-Phase%202%20Completed-brightgreen)
-![Next](https://img.shields.io/badge/Next%20Up-Phase%203%20Planned-blue)
+![Status](https://img.shields.io/badge/Status-Phase%203%20Completed-brightgreen)
+![Next](https://img.shields.io/badge/Next%20Up-Phase%204%20Planned-blue)
 
 Detect and summarize unusual Windows logon activity using **PowerShell + Python**, and correlate with **Wireshark** network captures — all inside a **VirtualBox** home lab (Windows + Kali).
 
@@ -17,9 +17,31 @@ Detect and summarize unusual Windows logon activity using **PowerShell + Python*
 
 ### 🗓️ Project Updates
 
+## 🔹 Phase 3 — ✅ Completed  
+**Build the Python Log Parser**  
+**Date:** November 6, 2025  
 
-## 🔹 Phase 2 — ✅ Completed
-**Collect & Analyze Windows Event Logs**
+**Summary**  
+- Exported failed-logon events (4625) from Windows to a text file and copy it into the repo: `evidence/FailedLogons.txt`.  
+- Opened the parser (`evidence/log_parser.py`) and ensure it reads `FailedLogons.txt` with UTF-8 encoding.  
+- Ran the script on Kali/terminal to parse the file and detect failed authentication attempts using regex.  
+- Generated a summary report with total failed logons and top source IPs; save as `evidence/log_summary.txt`.  
+- Captured proof of a successful run (terminal output showing totals/IPs) and save the screenshot as `evidence/log_parser_running.png`.  
+- Committed & pushed all Phase 3 artifacts to GitHub (script, summary, screenshot) and update this README section.
+
+**Deliverables**
+| File | Description |
+|------|--------------|
+| [`FailedLogons.txt`](evidence/FailedLogons.txt) | Raw exported Windows Security log (UTF-8 format) |
+| [`log_parser.py`](evidence/log_parser.py) | Python 3 script used to parse and analyze failed logons |
+| [`log_summary.txt`](evidence/log_summary.txt) | Text summary of total failed logons and top IP sources |
+| [`log_parser_running.png`](evidence/log_parser_running.png) | Screenshot showing the successful Python run in Kali |
+
+**Visualization**  
+![log_parser_running.png](evidence/log_parser_running.png)  
+
+## 🔹 Phase 2 — ✅ Completed  
+**Collect & Analyze Windows Event Logs**  
 **Date:** November 5, 2025  
 
 **Summary**
@@ -40,14 +62,12 @@ Detect and summarize unusual Windows logon activity using **PowerShell + Python*
 | [`failed_logons_by_user.png`](evidence/failed_logons_by_user.png) | Visualization – failed logons by user |
 | [`failed_logons_by_hour.png`](evidence/failed_logons_by_hour.png) | Visualization – failed logons by hour |
 
-**Visualization**
+**Visualization**  
 ![Failed Logons by User](evidence/failed_logons_by_user.png)  
 ![Failed Logons by Hour](evidence/failed_logons_by_hour.png)
 
 
-
-
-## 🔹 Phase 1 — ✅ Completed
+## 🔹 Phase 1 — ✅ Completed  
 **Build Your Home Cyber Lab**  
 **Date:** November 4, 2025  
 
@@ -57,31 +77,15 @@ Detect and summarize unusual Windows logon activity using **PowerShell + Python*
 - Verified connectivity with ICMP (ping) tests.  
 - Captured traffic in Wireshark and saved evidence.
 
-**Deliverables:**  
-- ![Lab Setup Screenshot](evidence/lab_setup.png)  
-- [Wireshark Capture (lab_setup.pcapng)](evidence/lab_setup.pcapng)
+**Deliverables:**   
+![Lab Setup Screenshot](evidence/lab_setup.png)  
+[Wireshark Capture (lab_setup.pcapng)](evidence/lab_setup.pcapng)
 
----
-
-## 🔹 Phase 2 — 🕓 Next Up
-**Collect Windows Event Logs**
-
-**Goal:**  
-Export and analyze Windows Security Logs using PowerShell (`wevtutil`) for failed logon events (Event ID 4625).  
-Prepare sample logs to feed into the Python parser in Phase 3.
-
-**Planned Tasks:**  
-- Enable and verify Windows event logging.  
-- Simulate failed logons.  
-- Export logs with PowerShell.  
-- Transfer to Kali for analysis.
-
-### 🧩 Phase 1: Build Your Home Cyber Lab
-
+## 🔹 Phase 1 — ✅ In Progress  
+**Build Your Home Cyber Lab**  
 **Date:** November 3, 2025  
-**Status:** In Progress ✅  
 
-#### What I Set Up
+**Summary:**
 - Installed **VirtualBox**
 - Downloaded **Kali Linux ISO (installer)** and **Windows 10 ISO**
 - Created two virtual machines:
@@ -90,23 +94,10 @@ Prepare sample logs to feed into the Python parser in Phase 3.
 - Configured both on an **Internal Network** (`CyberLabNet`)
 - Began testing connectivity (Wireshark + ping)
 
-#### Current Results
+**Current Results**
 - Kali and Windows both installed successfully
 - Wireshark running and ready to capture packets
 - Encountered minor network communication issues (to fix next session)
-
-#### Next Step
-- Troubleshoot ping connectivity between VMs  
-- Complete Wireshark packet capture for `lab_setup.png`  
-- Proceed to **Phase 2: Collect Windows Logs**
-
----
-
-## 🔎 Quick Preview
-
-[![Click to view evidence](./evidence/lab_setup.png)](./evidence/wireshark_failedlogons.png)
-
----
 
 ## 🧠 What This Shows (at a glance)
 
@@ -129,19 +120,11 @@ Prepare sample logs to feed into the Python parser in Phase 3.
 ---
 ## 🏁 Project Timeline
 
-| Phase | Description | Status |
-|-------|--------------|--------|
-| 1 | Build Home Cyber Lab | 🟢 **Completed** |
-| 2 | Collect Windows Event Logs | 🟢 **Completed** |
-| 3 | Python Log Parser | ⚪ **Planned** |
+| Phase | Description | Status | Date Completed | 
+|-------|--------------|--------|--------------|
+| 1 | Build Home Cyber Lab | 🟢 **Completed** | November 4, 2025 | 
+| 2 | Collect Windows Event Logs | 🟢 **Completed** | November 5, 2025 |
+| 3 | Python Log Parser | 🟢 **Completed** | November 6, 2025 |
 | 4 | Network Correlation | ⚪ **Planned** |
 | 5 | Documentation & Reporting | ⚪ **Planned** |
 | 6 | Bonus: Dashboard + Automation | ⚪ **Planned** |
-## 🚀 Run It
-
-### 1) Export Windows Security logs (PowerShell as Admin)
-```powershell
-# Inside this repo folder (Windows VM)
-.\scripts\export-logons.ps1
-# Creates: .\logs\FailedLogons.txt and .\logs\SuccessfulLogons.txt
-
