@@ -7,11 +7,25 @@
 [![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20Kali%20%7C%20VirtualBox-lightgrey)]()
 
 ![Status](https://img.shields.io/badge/Status-Phase%203%20Completed-brightgreen)
-![Next](https://img.shields.io/badge/Next%20Up-Phase%204%20Planned-blue)
+![Next](https://img.shields.io/badge/Next%20Up-Phase%204-blue)
 
-Detect and summarize unusual Windows logon activity using **PowerShell + Python**, and correlate with **Wireshark** network captures — all inside a **VirtualBox** home lab (Windows + Kali).
+### 🔍 Project Overview
+Built a complete home cyber lab using **Windows 10 and Kali Linux** inside **VirtualBox** to collect, analyze, and correlate Windows Security Event Logs.  
+The project demonstrates end-to-end blue-team workflow skills — from log collection and parsing to network validation and final reporting — using real tools such as **PowerShell, Python, and Wireshark**.
 
-> **Hiring managers:** This project simulates a junior SOC workflow: collect → parse → triage → correlate → report.
+> 🛡️Hands-on cybersecurity project demonstrating event-log analysis, Python automation, and network correlation in a home virtual lab environment.
+
+### 🕒 Project Timeline
+| Phase | Focus | Est. Hours | Hours Spent | Status | Completed |
+|-|-|-|-|-|-|
+| 🧩 1 | Build virtual lab (Windows + Kali setup, networking, Wireshark test) | 9 hrs | 6 hrs | ✅ Completed | Nov 2, 2025 |
+| 🧩 2 | Collect Windows Event Logs (PowerShell export) | 6 hrs | 4 hrs | ✅ Completed | Nov 5, 2025 |
+| 🧩 3 | Develop Python log parser for failed logons | 9 hrs | 3 hrs | ✅ Completed | Nov 6, 2025 |
+| 🧩 4 | Correlate network captures with event timestamps | 6 hrs | TBD | 🔄 In Progress | — |
+| 🧩 5 | Document findings & write final report | 6 hrs | TBD | ⏳ Planned | — |
+| 🧩 6 | Bonus: automation + HTML dashboard | Optional | TBD | 💡 Future Idea | — |
+| **🧾 Total** | **Phases 1–3 Complete** | **36 hrs** | **13 hrs** | ✅ On Track | — |
+> ⚡ **Ahead of Schedule:** Completed 3 phases in 13 hours — roughly 45% faster than estimated.
 
 ---
 
@@ -62,11 +76,6 @@ Detect and summarize unusual Windows logon activity using **PowerShell + Python*
 | [`failed_logons_by_user.png`](evidence/failed_logons_by_user.png) | Visualization – failed logons by user |
 | [`failed_logons_by_hour.png`](evidence/failed_logons_by_hour.png) | Visualization – failed logons by hour |
 
-**Visualization**  
-![Failed Logons by User](evidence/failed_logons_by_user.png)  
-![Failed Logons by Hour](evidence/failed_logons_by_hour.png)
-
-
 ## 🔹 Phase 1 — ✅ Completed  
 **Build Your Home Cyber Lab**  
 **Date:** November 4, 2025  
@@ -77,7 +86,7 @@ Detect and summarize unusual Windows logon activity using **PowerShell + Python*
 - Verified connectivity with ICMP (ping) tests.  
 - Captured traffic in Wireshark and saved evidence.
 
-**Deliverables:**   
+**Visualization**  
 ![Lab Setup Screenshot](evidence/lab_setup.png)  
 [Wireshark Capture (lab_setup.pcapng)](evidence/lab_setup.pcapng)
 
@@ -99,32 +108,8 @@ Detect and summarize unusual Windows logon activity using **PowerShell + Python*
 - Wireshark running and ready to capture packets
 - Encountered minor network communication issues (to fix next session)
 
-## 🧠 What This Shows (at a glance)
+## 🧠 Key Takeaways
+(...bullet list of what you learned...)
 
-| Skill Area | Evidence |
-|---|---|
-| **Windows security auditing** | Exported **Event IDs 4625** (failed) and **4624** (successful) via PowerShell |
-| **Python scripting** | `parser.py` summarizes top attacking IPs / targeted users + failed vs successful |
-| **Network analysis** | **Wireshark** capture during logon attempts; timestamp correlation |
-| **Lab design** | **VirtualBox**: Windows + Kali on an isolated network |
-| **Reporting** | 1–2 page incident report template in `/report/` |
-
----
-
-## 🧰 Stack
-
-- **Virtualization:** VirtualBox (Windows 10/11 + Kali/Ubuntu)
-- **OS/Tools:** Windows Event Viewer, PowerShell, Python 3, Wireshark
-- **Learning:** TryHackMe (optional validation labs)
-
----
-## 🏁 Project Timeline
-
-| Phase | Description | Status | Date Completed | 
-|-------|--------------|--------|--------------|
-| 1 | Build Home Cyber Lab | 🟢 **Completed** | November 4, 2025 | 
-| 2 | Collect Windows Event Logs | 🟢 **Completed** | November 5, 2025 |
-| 3 | Python Log Parser | 🟢 **Completed** | November 6, 2025 |
-| 4 | Network Correlation | ⚪ **Planned** |
-| 5 | Documentation & Reporting | ⚪ **Planned** |
-| 6 | Bonus: Dashboard + Automation | ⚪ **Planned** |
+## 🏁 Final Résumé Line
+(...the résumé-ready summary...)
