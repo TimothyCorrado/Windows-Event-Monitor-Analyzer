@@ -109,7 +109,35 @@ The project demonstrates end-to-end blue-team workflow skills — from log colle
 - Encountered minor network communication issues (to fix next session)
 
 ## 🧠 Key Takeaways
-(...bullet list of what you learned...)
 
-## 🏁 Final Résumé Line
-(...the résumé-ready summary...)
+#### 🧩 Phase 1 – Build the Virtual Lab
+- Learned how to configure **Windows and Kali Linux in VirtualBox** with internal networking for isolated testing.
+- Practiced setting up **secure file sharing** between systems for evidence collection.
+- Validated **network communication and packet visibility** using Wireshark to confirm traffic capture between virtual machines.
+- Gained hands-on familiarity with how a real SOC might segment and monitor internal traffic in a sandboxed environment.
+
+#### 🧩 Phase 2 – Collect Windows Event Logs
+- Used **PowerShell (`wevtutil`)** to query and export Security Event Logs filtered by **Event ID 4625** (failed logons).
+- Learned the difference between **Event IDs 4624 (successful logon)** and **4625 (failed logon)** and their relevance in brute-force detection.
+- Understood **Windows event structure** — timestamp, source IP, account name, and logon type fields.
+- Practiced exporting data in both **text and CSV formats**, and learned about **UTF-16 vs UTF-8 encoding** when transferring logs between Windows and Linux.
+
+#### 🧩 Phase 3 – Develop the Python Log Parser
+- Built a **custom Python script** (`log_parser.py`) to automate analysis of exported logs.
+- Utilized **regex (regular expressions)** to match Event ID 4625 entries and extract IP addresses.
+- Implemented **data aggregation with Python’s `collections.Counter`** to identify top failed login sources.
+- Overcame file encoding issues, learned **error handling (`errors='ignore'`)**, and confirmed UTF-8 parsing in Linux.
+- Created a **summary output file** and visual proof (terminal screenshot) — demonstrating data-driven log analysis from start to finish.
+
+## 🏁 Final Resume Line
+> Windows Event Log Analyzer (Cybersecurity Home Lab Project) – Designed and built a hands-on SOC simulation lab using Windows and Kali Linux. Collected and analyzed Windows Security Event Logs (Event ID 4625) to identify failed authentication attempts, automated log parsing with Python and PowerShell, and correlated findings with Wireshark network captures to demonstrate real-world incident detection and response workflows.
+
+<!--
+
+listing this project on my résumé or LinkedIn, format it like this:
+
+Windows Event Log Analyzer (Cybersecurity Home Lab Project) | GitHub: github.com/TimothyCorrado/Windows-Event-Monitor-Analyzer  
+- Built a virtual SOC lab using Windows and Kali Linux to simulate blue-team workflows.  
+- Collected and analyzed Security Event Logs (Event ID 4625) to identify failed logons.  
+- Automated log parsing and reporting using Python and PowerShell.  
+- Correlated system events with Wireshark network captures for incident validation.-->
