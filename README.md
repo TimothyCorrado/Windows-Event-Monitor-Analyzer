@@ -6,8 +6,8 @@
 [![Wireshark](https://img.shields.io/badge/Wireshark-✓-blue)]()
 [![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20Kali%20%7C%20VirtualBox-lightgrey)]()
 
-![Status](https://img.shields.io/badge/Status-Phase%201%20Completed-brightgreen)
-![Next](https://img.shields.io/badge/Next%20Up-Phase%202%20Planned-blue)
+![Status](https://img.shields.io/badge/Status-Phase%202%20Completed-brightgreen)
+![Next](https://img.shields.io/badge/Next%20Up-Phase%203%20Planned-blue)
 
 Detect and summarize unusual Windows logon activity using **PowerShell + Python**, and correlate with **Wireshark** network captures — all inside a **VirtualBox** home lab (Windows + Kali).
 
@@ -16,6 +16,36 @@ Detect and summarize unusual Windows logon activity using **PowerShell + Python*
 ---
 
 ### 🗓️ Project Updates
+
+
+## 🔹 Phase 2 — ✅ Completed
+**Collect & Analyze Windows Event Logs**
+**Date:** November 5, 2025  
+
+**Summary**
+- Enabled logon auditing and generated realistic 4625 events
+- Exported full Windows Security log (.evtx) + filtered CSV + text + screenshot evidence
+- Transferred data to Kali Linux for analysis via shared folders
+- Parsed and summarized failed logons using Python (pandas + collections)
+- Created visualizations (Matplotlib) showing logon failures by user and by hour
+
+**Deliverables**
+| File | Description |
+|------|--------------|
+| [`Failed_Logons.csv`](evidence/Failed_Logons.csv) | Raw failed-logon events |
+| [`SecurityLogs_Full.evtx`](evidence/SecurityLogs_Full.evtx) | Full Windows Security log export |
+| [`FailedLogons.txt`](evidence/FailedLogons.txt) | Text summary of PowerShell output |
+| [`FailedLogons_Screenshot.png`](evidence/FailedLogons_Screenshot.png) | Proof of PowerShell export |
+| [`failed_logon_summary.txt`](evidence/failed_logon_summary.txt) | Kali analysis summary |
+| [`failed_logons_by_user.png`](evidence/failed_logons_by_user.png) | Visualization – failed logons by user |
+| [`failed_logons_by_hour.png`](evidence/failed_logons_by_hour.png) | Visualization – failed logons by hour |
+
+**Visualization**
+![Failed Logons by User](evidence/failed_logons_by_user.png)  
+![Failed Logons by Hour](evidence/failed_logons_by_hour.png)
+
+
+
 
 ## 🔹 Phase 1 — ✅ Completed
 **Build Your Home Cyber Lab**  
@@ -102,7 +132,7 @@ Prepare sample logs to feed into the Python parser in Phase 3.
 | Phase | Description | Status |
 |-------|--------------|--------|
 | 1 | Build Home Cyber Lab | 🟢 **Completed** |
-| 2 | Collect Windows Event Logs | ⚪ **Planned** |
+| 2 | Collect Windows Event Logs | 🟢 **Completed** |
 | 3 | Python Log Parser | ⚪ **Planned** |
 | 4 | Network Correlation | ⚪ **Planned** |
 | 5 | Documentation & Reporting | ⚪ **Planned** |
