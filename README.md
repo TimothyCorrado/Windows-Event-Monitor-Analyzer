@@ -6,8 +6,8 @@
 [![Wireshark](https://img.shields.io/badge/Wireshark-✓-blue)]()
 [![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20Kali%20%7C%20VirtualBox-lightgrey)]()
 
-![Status](https://img.shields.io/badge/Status-Phase%204%20Completed-brightgreen)
-![Next](https://img.shields.io/badge/Next%20Up-Phase%205-blue)
+![Status](https://img.shields.io/badge/Status-Phase%205%20Completed-brightgreen)
+![Next](https://img.shields.io/badge/Next%20Up-Phase%206-blue)
 
 ### 🔍 Project Overview
 Built a complete home cyber lab using **Windows 10 and Kali Linux** inside **VirtualBox** to collect, analyze, and correlate Windows Security Event Logs.  
@@ -22,14 +22,28 @@ The project demonstrates end-to-end blue-team workflow skills — from log colle
 | 🧩 2 | Collect Windows Event Logs (PowerShell export) | 6 hrs | 4 hrs | ✅ Completed | Nov 5, 2025 |
 | 🧩 3 | Develop Python log parser for failed logons | 9 hrs | 3 hrs | ✅ Completed | Nov 6, 2025 |
 | 🧩 4 | Correlate network captures with event timestamps | 6 hrs | 2 hrs | ✅ Completed | Nov 7, 2025 |
-| 🧩 5 | Document findings & write final report | 6 hrs | TBD | 🔄 In Progress | — |
-| 🧩 6 | Bonus: automation + HTML dashboard | Optional | TBD | 💡 Future Idea | — |
-| **🧾 Total** | **Phases 1–3 Complete** | **36 hrs** | **15 hrs** | ✅ On Track | — |
-> ⚡ **Ahead of Schedule:** Completed 4 phases in 15 hours — roughly 45% faster than estimated.
+| 🧩 5 | Document findings & write final report | 2 hrs | 1 hr | ✅ Completed | Nov 8, 2025 |
+| 🧩 6 | Bonus: automation + HTML dashboard | 9 hrs | TBD | 💡 Future Idea | — |
+| **🧾 Total** | **Phases 1–5 Complete** | **41 hrs** | **15 hrs** | ✅ On Track | — |
+> ⚡ **Ahead of Schedule:** Completed 4 phases in 16 hours — roughly 45% faster than estimated.
 
 ---
 
 ### 🗓️ Project Updates
+
+## 🔹 Phase 5 — ✅ Completed  
+**Finalize Documentation & Repository Submission**  
+**Date:** November 8, 2025  
+
+**Summary**  
+- Consolidated all project deliverables and verified each phase (1–4) was accurately documented in this README.  
+- Ensured all evidence files (screenshots, reports, and parser outputs) were stored in the `/evidence` directory.  
+- Reviewed the Python scripts for clarity, added inline comments, and confirmed successful parsing and reporting functionality.  
+- Verified GitHub repository structure and updated README formatting for consistency across all phases.  
+- Completed final commit and push to GitHub to finalize project submission.  
+
+**Deliverables**  
+- Updated `README.md` (Phases 1 – 5 complete)  
 
 ## 🔹 Phase 4 — ✅ Completed  
 **Validate Network Context**  
