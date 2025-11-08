@@ -6,8 +6,11 @@
 [![Wireshark](https://img.shields.io/badge/Wireshark-✓-blue)]()
 [![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20Kali%20%7C%20VirtualBox-lightgrey)]()
 
-![Status](https://img.shields.io/badge/Status-Phase%205%20Completed-brightgreen)
-![Next](https://img.shields.io/badge/Next%20Up-Phase%206-blue)
+![Status](https://img.shields.io/badge/Status-All%20Phases%20Completed-brightgreen)
+![Completion](https://img.shields.io/badge/Project%20Finalized-November%208%2C%202025-blue)
+![Dashboard](https://img.shields.io/badge/HTML%20Dashboard-Generated%20Successfully-lightgrey)
+
+> 🏁 **Final Status:** All six phases completed, verified, and documented — **Full-cycle Blue Team project:** from log collection and event correlation to automated anomaly detection and HTML dashboard visualization.
 
 ### 🔍 Project Overview
 Built a complete home cyber lab using **Windows 10 and Kali Linux** inside **VirtualBox** to collect, analyze, and correlate Windows Security Event Logs.  
@@ -23,13 +26,44 @@ The project demonstrates end-to-end blue-team workflow skills — from log colle
 | 🧩 3 | Develop Python log parser for failed logons | 9 hrs | 3 hrs | ✅ Completed | Nov 6, 2025 |
 | 🧩 4 | Correlate network captures with event timestamps | 6 hrs | 2 hrs | ✅ Completed | Nov 7, 2025 |
 | 🧩 5 | Document findings & write final report | 2 hrs | 1 hr | ✅ Completed | Nov 8, 2025 |
-| 🧩 6 | Bonus: automation + HTML dashboard | 9 hrs | TBD | 💡 Future Idea | — |
-| **🧾 Total** | **Phases 1–5 Complete** | **41 hrs** | **15 hrs** | ✅ On Track | — |
-> ⚡ **Ahead of Schedule:** Completed 4 phases in 16 hours — roughly 45% faster than estimated.
+| 🧩 6 | Bonus: automation + HTML dashboard | 9 hrs | 2 hrs | ✅ Completed | Nov 8, 2025 |
+| **🧾 Total** | **All Phases 1–6 Complete** | **41 hrs** | **18 hrs** | 🏁 **Project Complete** | Nov 8, 2025 |
+
+> ⚡ **Completed Early:** Finished all 6 phases in 18 hours — roughly **56% faster** than estimated.
 
 ---
 
 ### 🗓️ Project Updates
+
+## 🔹 Phase 6 — ✅ Completed  
+**Implement Bonus Upgrades**  
+**Date:** November 8, 2025  
+
+**Summary**  
+- Enhanced the Python parser to include **ratio-based anomaly detection**, comparing Windows Security **Event ID 4625 (Failed Logons)** vs. **4624 (Successful Logons)**.  
+- Configured the script to flag failure ratios ≥ 30% as potential brute-force or password-spraying indicators.  
+- Added an **HTML dashboard** that visualizes logon statistics (totals, top source IPs, and top targeted accounts).  
+- Exported fresh Windows Security logs from host **TIMOT** for accurate testing:  
+  - `wevtutil qe Security /q:"*[System[(EventID=4625)]]" /f:text > FailedLogons.txt`  
+  - `wevtutil qe Security /q:"*[System[(EventID=4624)]]" /f:text > SuccessfulLogons.txt`  
+- Parsed both exports successfully, identifying **24 failed logons** and **823 successful logons** (≈ 3% failure rate — normal bounds).  
+- Verified failed attempts originated mainly from **127.0.0.1** (localhost) and **192.168.56.11** (Kali VM).  
+- Confirmed that the **Tim** account was the top target during simulated RDP brute-force activity from Phase 4.  
+
+**Deliverables**  
+| File | Description |  
+|------|--------------|  
+| [`parser.py`](parser.py) | Final Python parser with anomaly-detection logic and HTML dashboard output |  
+| [`FailedLogons.txt`](evidence/FailedLogons.txt) | Windows Security export — Event ID 4625 (Failed Logons) |  
+| [`SuccessfulLogons.txt`](evidence/SuccessfulLogons.txt) | Windows Security export — Event ID 4624 (Successful Logons) |  
+| [`log_summary.txt`](evidence/log_summary.txt) | Final parsed summary showing totals, top IPs, and failure ratio |  
+| [`dashboard.html`](evidence/dashboard.html) | HTML visualization of parsed logon activity and indicators |  
+| [`final_parser_run.png`](evidence/final_parser_run.png) | Screenshot of successful parser execution and summary output |  
+| [`Dashboard_html.png`](evidence/Dashboard_html.png) | Screenshot of dashboard.html open in a browser |  
+
+**Visualization**  
+![final_parser_run.png](evidence/final_parser_run.png)
+![Dashboard_html.png](evidence/Dashboard_html.png)
 
 ## 🔹 Phase 5 — ✅ Completed  
 **Finalize Documentation & Repository Submission**  
@@ -163,6 +197,42 @@ The project demonstrates end-to-end blue-team workflow skills — from log colle
 - Implemented **data aggregation with Python’s `collections.Counter`** to identify top failed login sources.
 - Overcame file encoding issues, learned **error handling (`errors='ignore'`)**, and confirmed UTF-8 parsing in Linux.
 - Created a **summary output file** and visual proof (terminal screenshot) — demonstrating data-driven log analysis from start to finish.
+
+#### 🧩 Phase 4 – Correlate Network Captures with Event Timestamps
+- Captured and analyzed **Wireshark network traces** from both Kali and Windows during simulated RDP logon attempts.  
+- Applied targeted filters (`ip.addr == 192.168.56.10 && tcp.port == 3389`) to isolate **RDP handshake and authentication traffic**.  
+- Correlated Wireshark timestamps with Windows Security **Event ID 4625** entries to confirm event accuracy.  
+- Validated that the RDP attack from **Kali (192.168.56.11)** directly caused failed logon events on **Windows (192.168.56.10)**.  
+- Reinforced understanding of how **network and host-level logs interrelate** in security investigations.  
+
+#### 🧩 Phase 5 – Document Findings & Finalize Report
+- Consolidated all **evidence files, screenshots, and scripts** into a structured GitHub repository.  
+- Documented each project phase in **README.md** with consistent formatting, summaries, and deliverable tables.  
+- Learned the importance of **traceability and reproducibility** in security research projects.  
+- Practiced writing **clear technical documentation** suitable for SOC reports or project submissions.  
+- Gained confidence in using GitHub for professional-grade version control and evidence presentation.  
+
+#### 🧩 Phase 6 – Implement Bonus Upgrades
+- Expanded the Python parser with **ratio-based anomaly detection**, calculating failed vs. successful logon ratios.  
+- Implemented **alert thresholds** (≥30% failure ratio) to flag potential brute-force or password-spraying attempts.  
+- Added an automated **HTML dashboard generator** for visual triage of top IPs, targeted accounts, and totals.  
+- Resolved **UTF-16 encoding issues** when reading Windows log exports, ensuring accurate event parsing.  
+- Successfully detected **24 failed logons** vs. **823 successful logons**, confirming realistic network behavior.  
+- Completed full project automation — from log collection to visualization — demonstrating end-to-end blue-team analysis.  
+
+
+### 🏁 Final Reflection  
+
+This project provided hands-on experience across the **entire incident analysis lifecycle** — from data collection to automation and visualization. Each phase reinforced key cybersecurity fundamentals:  
+
+- **Phase 1–2** built a realistic, sandboxed environment where I simulated adversarial activity and captured genuine log artifacts.  
+- **Phase 3** transformed those raw events into structured, queryable data through Python scripting and regex-based parsing.  
+- **Phase 4** demonstrated how to correlate **network traffic (Wireshark)** with **host-based evidence (Event IDs)** to prove event causality.  
+- **Phase 5** focused on documentation, GitHub workflow, and version control — reinforcing that strong technical work must also be **well-communicated**.  
+- **Phase 6** elevated the project with automation and visualization, turning a static report into a **dynamic, repeatable tool** that mirrors real-world blue team workflows.  
+
+By the end, I had developed not just a functioning parser and dashboard, but also a **repeatable SOC-style pipeline** for detecting, validating, and reporting authentication anomalies.  
+This project strengthened my technical, analytical, and communication skills.  
 
 ## 🏁 Final Resume Line
 > Windows Event Log Analyzer (Cybersecurity Home Lab Project) – Designed and built a hands-on SOC simulation lab using Windows and Kali Linux. Collected and analyzed Windows Security Event Logs (Event ID 4625) to identify failed authentication attempts, automated log parsing with Python and PowerShell, and correlated findings with Wireshark network captures to demonstrate real-world incident detection and response workflows.

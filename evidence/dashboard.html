@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Windows Logon Triage Dashboard</title>
+</head>
+<body>
+  <h1>Windows Logon Triage Dashboard</h1>
+
+  <h2>Totals</h2>
+  <p><strong>Failed logons (4625):</strong> 24</p>
+  <p><strong>Successful logons (4624):</strong> 823</p>
+
+  <h2>Top Source IPs (Failed 4625)</h2>
+  <table border="1" cellpadding="4">
+    <tr><th>Source IP</th><th>Count</th></tr>
+    <tr><td>127.0.0.1</td><td>19</td></tr>
+<tr><td>192.168.56.11</td><td>5</td></tr>
+  </table>
+
+  <h2>Top Targeted Accounts (Failed 4625)</h2>
+  <table border="1" cellpadding="4">
+    <tr><th>Account</th><th>Count</th></tr>
+    <tr><td>Tim</td><td>19</td></tr>
+<tr><td>-</td><td>5</td></tr>
+  </table>
+
+  <h2>Top Accounts (Successful 4624)</h2>
+  <table border="1" cellpadding="4">
+    <tr><th>Account</th><th>Count</th></tr>
+    <tr><td>SYSTEM</td><td>721</td></tr>
+<tr><td>Tim</td><td>30</td></tr>
+<tr><td>DWM-1</td><td>18</td></tr>
+<tr><td>-</td><td>9</td></tr>
+<tr><td>UMFD-1</td><td>9</td></tr>
+<tr><td>UMFD-0</td><td>9</td></tr>
+<tr><td>NETWORK SERVICE</td><td>9</td></tr>
+<tr><td>LOCAL SERVICE</td><td>9</td></tr>
+<tr><td>defaultuser0</td><td>6</td></tr>
+<tr><td>DWM-2</td><td>2</td></tr>
+  </table>
+</body>
+</html>

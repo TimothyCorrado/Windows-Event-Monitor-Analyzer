@@ -1,4 +1,32 @@
-Top Failed Login Source IPs:
-127.0.0.1: 14 failed attempts
+Windows Logon Triage Summary
+Generated: 2025-11-08 18:52:29Z UTC
 
-Total failed logons: 14
+Total failed logons (4625): 24
+Total successful logons (4624): 823
+
+Failure ratio is 0.03, within normal bounds.
+
+Top source IPs (failed 4625):
+  - 127.0.0.1: 19
+  - 192.168.56.11: 5
+
+Top targeted accounts (failed 4625):
+  - Tim: 19
+  - -: 5
+
+Top accounts (successful 4624):
+  - SYSTEM: 721
+  - Tim: 30
+  - DWM-1: 18
+  - -: 9
+  - UMFD-1: 9
+  - UMFD-0: 9
+  - NETWORK SERVICE: 9
+  - LOCAL SERVICE: 9
+  - defaultuser0: 6
+  - DWM-2: 2
+
+Notes:
+  • Investigate IPs with unusually high failed attempts.
+  • Compare failed vs. successful to spot possible compromises.
+  • Align timestamps with Wireshark or firewall logs for deeper correlation.
